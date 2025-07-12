@@ -35,8 +35,8 @@ export default function Grid() {
             <div className="flex justify-end max-w-lg mx-auto">
                 <button 
                     onClick={resetFlips} 
-                    className="cursor-pointer mt-4 px-4 py-2 rounded bg-neutral-200 dark:text-white
-                            text-black dark:bg-neutral-900"
+                    className="cursor-pointer mt-4 px-4 py-2 rounded text-black bg-neutral-200 active:bg-neutral-300
+                    dark:text-white dark:bg-neutral-900 dark:active:bg-neutral-800"
                     >
                     Reset Flips
                 </button>
