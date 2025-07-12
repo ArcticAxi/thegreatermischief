@@ -26,11 +26,19 @@ const { title = "The Greater Mischief" } = Astro.props;
         <title>{title}</title>
 	</head>
 	<body class="bg-neutral-100 dark:bg-neutral-800">
-        <header class="flex items-center relative w-full text-center py-6 border-b border-neutral-300 dark:border-neutral-600">
+        <header class="px-20 flex items-center relative w-full text-center py-6 border-b border-neutral-300 dark:border-neutral-600">
             <h1 class="mx-auto dark:text-white uppercase text-4xl font-bold font-mono">{title}</h1>
             <div class="absolute right-6">
-                <DarkToggle client:load />
+                <!-- Compact (emoji-only) toggle on small screens -->
+                <div class="block md:hidden">
+                    <DarkToggle compact client:load />
                 </div>
+                
+                <!-- Full button on medium and up -->
+                <div class="hidden md:block">
+                    <DarkToggle client:load />
+                </div>
+            </div>
         </header>
         <main>
             <slot />  <!-- This is where page content will go -->

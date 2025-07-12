@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 
-export default function DarkToggle() {
+export default function DarkToggle({ compact = false }) {
   const [darkMode, setDarkMode] = useState(null);
 
   useEffect(() => {
@@ -31,7 +31,7 @@ export default function DarkToggle() {
       onClick={toggleTheme}
       className="cursor-pointer px-4 py-2 rounded bg-neutral-200 dark:bg-neutral-900 text-black dark:text-white"
     >
-      {darkMode ? '☀️ Light Mode' : '🌙 Dark Mode'}
+      {compact ? (darkMode ? '☀️' : '🌙') : darkMode ? '☀️ Light Mode' : '🌙 Dark Mode'}
     </button>
   );
 }

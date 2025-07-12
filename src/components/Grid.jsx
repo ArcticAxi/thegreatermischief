@@ -41,7 +41,7 @@ export default function Grid() {
                     Reset Flips
                 </button>
             </div>
-            <div className="my-6 grid [grid-template-columns:repeat(5,auto)] gap-8 justify-center">
+            <div className="my-6 grid [grid-template-columns:repeat(2,auto)] gap-4 md:[grid-template-columns:repeat(3,auto)] md:gap-6 lg:[grid-template-columns:repeat(5,auto)] lg:gap-8 justify-center">
                 {rats.map((rat) => (
                     <Card
                         key={rat.id}
