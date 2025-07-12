@@ -1,16 +1,17 @@
 ---
-
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Grid from '../components/Grid.jsx';
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<BaseLayout>
+	<div class="mx-auto max-w-lg text-justify mt-4 text-neutral-900 dark:text-neutral-100">
+		<p>I’m obsessed with rats and made this quirky project to create an overview of rats from popular movies.
+			Explore your favorite rats in The Greater Mischief! 
+		</p>
+		<p class="mt-2"><span class="font-bold">Click</span> any card to flip it and reveal more info about the character.</p>
+		<p class="text-sm mt-3">Disclaimer: I don’t own any of the images, they are screenshots taken from the character's respective movie. Movie titles are displayed on the backside!</p>
+	</div>
+  
+	<Grid client:load />
+
+  </BaseLayout>

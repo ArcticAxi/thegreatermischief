@@ -1,0 +1,31 @@
+---
+import "../styles/global.css";
+import DarkToggle from "../components/DarkToggle.jsx";
+
+const { title = "The Greater Mischief" } = Astro.props;
+---
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+        <meta name="description" content="A lovingly crafted gallery of iconic movie rats. Coded with cheddar." />
+		<title>{title}</title>
+	</head>
+	<body class="bg-neutral-100 dark:bg-neutral-800">
+        <header class="flex items-center relative w-full text-center py-6 border-b border-neutral-300 dark:border-neutral-600">
+            <h1 class="mx-auto dark:text-white uppercase text-4xl font-bold font-mono">{title}</h1>
+            <div class="absolute right-6">
+                <DarkToggle client:load />
+                </div>
+        </header>
+        <main>
+            <slot />  <!-- This is where page content will go -->
+        </main>
+        <footer class="dark:text-neutral-400 text-sm text-center text-neutral-600 mt-8 mb-8">
+            <p> &copy; 2025 - <a class="underline" href="https://michelestassen.netlify.app">Michèle Stassen</a> (ArcticAxi)</p>
+        </footer>
+	</body>
+</html>
