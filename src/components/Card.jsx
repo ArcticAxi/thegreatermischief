@@ -27,6 +27,7 @@ export default function Card({ rat, isSelected, isFlipped, onSelect }) {
                             <img
                                 src={rat.img}
                                 alt={`Image of ${rat.name}`}
+                                loading="lazy"
                                 className="border-2 border-t-0 rounded-b border-white inline-block w-full h-full object-cover"
                             />
                         </div>
