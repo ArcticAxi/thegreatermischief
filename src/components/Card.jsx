@@ -39,7 +39,7 @@ export default function Card({ rat, isSelected, isFlipped, onSelect }) {
                         <div className="flex-col flex w-40 h-60 items-center py-2 bg-neutral-400 dark:bg-neutral-600 rounded-b">
                             <p className="text-neutral-900 text-sm dark:text-neutral-50">{rat.source || 'Unknown Source'}</p>
                             <div className="flex-1 flex items-center">
-                                <p className="mb-10 text-base text-neutral-800 dark:text-neutral-200">{rat.description || "Maniac"}</p>
+                                <p className="mb-10 mx-2 text-base text-neutral-800 dark:text-neutral-200">{rat.description || "Maniac"}</p>
                             </div>
                         </div>
                     </div>
